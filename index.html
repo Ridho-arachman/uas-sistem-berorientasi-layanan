@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CineInfo - Platform informasi film terlengkap dengan database film terbaru dan terpopuler">
+    <meta name="keywords" content="film, movie, cinema, review, rating, informasi film">
+    <meta name="author" content="CineInfo Team">
+    <meta property="og:title" content="CineInfo - Layanan Informasi Film">
+    <meta property="og:description" content="Temukan film terbaik dengan informasi lengkap dan rating terpercaya">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>CineInfo - Layanan Informasi Film</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="film-reel">
+                <div class="reel"></div>
+                <div class="reel"></div>
+            </div>
+            <p>Loading CineInfo...</p>
+        </div>
+    </div>
+
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🎬 CineInfo</h2>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Cari film...">
+                <button id="search-btn">🔍</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#movies">Film</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Temukan Film Terbaik</h1>
+                <p class="hero-subtitle">Jelajahi dunia sinema dengan informasi lengkap tentang film-film terbaru dan
+                    terpopuler</p>
+                <button class="cta-button">Mulai Jelajahi</button>
+            </div>
+            <div class="hero-3d">
+                <div class="floating-cards">
+                    <div class="movie-card card-1">
+                        <div class="card-content">
+                            <h3>Action</h3>
+                        </div>
+                    </div>
+                    <div class="movie-card card-2">
+                        <div class="card-content">
+                            <h3>Drama</h3>
+                        </div>
+                    </div>
+                    <div class="movie-card card-3">
+                        <div class="card-content">
+                            <h3>Comedy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-animation"></div>
+    </section>
+
+    <!-- Enhanced Movies Section -->
+    <section id="movies" class="movies-section">
+        <div class="container">
+            <h2 class="section-title">Film Populer</h2>
+
+            <!-- Filter Controls -->
+            <div class="filter-controls glass">
+                <div class="filter-group">
+                    <label>Genre:</label>
+                    <select id="genre-filter">
+                        <option value="all">Semua Genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Thriller">Thriller</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Tahun:</label>
+                    <select id="year-filter">
+                        <option value="all">Semua Tahun</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Rating:</label>
+                    <select id="rating-filter">
+                        <option value="all">Semua Rating</option>
+                        <option value="9+">9.0+</option>
+                        <option value="8+">8.0+</option>
+                        <option value="7+">7.0+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="movies-grid">
+                <!-- Movie cards will be rendered dynamically by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang CineInfo</h2>
+                    <p>CineInfo adalah platform informasi film terdepan yang menyediakan data lengkap tentang film-film
+                        dari seluruh dunia. Kami berkomitmen untuk memberikan pengalaman terbaik dalam mencari dan
+                        menemukan film favorit Anda.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">📊</div>
+                            <h3>Database Lengkap</h3>
+                            <p>Ribuan film dengan informasi detail</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Update Realtime</h3>
+                            <p>Informasi terbaru setiap hari</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🎯</div>
+                            <h3>Rekomendasi Personal</h3>
+                            <p>Saran film sesuai selera Anda</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="rotating-cube">
+                        <div class="cube">
+                            <div class="face front">🎬</div>
+                            <div class="face back">🎭</div>
+                            <div class="face right">🎪</div>
+                            <div class="face left">🎨</div>
+                            <div class="face top">🎵</div>
+                            <div class="face bottom">🎯</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>info@cineinfo.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h3>Telepon</h3>
+                        <p>+62 123 456 7890</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h3>Alamat</h3>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-title">Tim Pengembang</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dev 1" class="team-photo" />
+                    <div class="team-name">Andi Pratama</div>
+                    <div class="team-role">Frontend Developer</div>
+                    <div class="team-bio">Spesialis UI/UX dan React, fokus pada pengalaman pengguna modern.</div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dev 2" class="team-photo" />
+                    <div class="team-name">Siti Rahmawati</div>
+                    <div class="team-role">Backend Developer</div>
+                    <div class="team-bio">Ahli API dan database, membangun sistem yang efisien dan aman.</div>
+                </div>
+                <div class="team-card">
+                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Dev 3" class="team-photo" />
+                    <div class="team-name">Budi Santoso</div>
+                    <div class="team-role">Fullstack Developer</div>
+                    <div class="team-bio">Mengintegrasikan frontend dan backend, memastikan performa optimal.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CineInfo. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
